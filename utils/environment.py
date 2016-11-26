@@ -86,7 +86,8 @@ class BoxyEnvironmentCommand(sublime_plugin.ApplicationCommand):
             ''' % info
         )
 
-        sublime.message_dialog(
-            msg + '\nInfo has been copied to the clipboard.'
-        )
-        sublime.set_clipboard(msg)
+        view = sublime.active_window().active_view()
+        def copy_and_hide(msg):
+            sublime.set_clipboard(msg)
+            view.hide_popup()
+        view.show_popup((msg.replace('\n', '<br>') + '<br><a href="' + msg + '">Copy</a>'), on_navigate=copy_and_hide)
