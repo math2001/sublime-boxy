@@ -90,4 +90,6 @@ class BoxyEnvironmentCommand(sublime_plugin.ApplicationCommand):
         def copy_and_hide(msg):
             sublime.set_clipboard(msg)
             view.hide_popup()
-        view.show_popup((msg.replace('\n', '<br>') + '<br><a href="' + msg + '">Copy</a>'), on_navigate=copy_and_hide)
+        view.show_popup(msg.replace('\n', '<br>') +
+                        '<br><a href="' + msg + '">Copy</a>',
+                        on_navigate=copy_and_hide)
