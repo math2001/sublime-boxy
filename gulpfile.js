@@ -13,7 +13,6 @@ var gulp = require('gulp');
 var del = require('del');
 var path = require('path');
 var colors = require('colors');
-var sleep = require('sleep');
 var runSequence = require('run-sequence');
 var conventionalChangelog = require('conventional-changelog');
 var conventionalGithubReleaser = require('conventional-github-releaser');
@@ -142,8 +141,6 @@ gulp.task('process:schemes', function() {
 gulp.task('convert:schemes', function() {
   return gulp.src('./schemes/*.YAML-tmTheme')
     .pipe($.flatmap(function(stream) {
-      sleep.sleep(2);
-
       return stream
         .pipe($.plumber(function(error) {
           console.log('[convert:schemes]'.bold.magenta + ' There was an issue converting color schemes:\n'.bold.red + error.message +
@@ -251,8 +248,6 @@ gulp.task('process:extras', function() {
 gulp.task('convert:extras', function() {
   return gulp.src('./extras/**/*.YAML-tmTheme')
     .pipe($.flatmap(function(stream) {
-      sleep.sleep(2);
-
       return stream
         .pipe($.plumber(function(error) {
           console.log('[convert:extras]'.bold.magenta + ' There was an issue converting color extras:\n'.bold.red + error.message +
