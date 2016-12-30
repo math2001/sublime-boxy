@@ -28,6 +28,13 @@
 
 {
   "class": "tab_control",
+  // "layer0.texture": "Boxy Theme/assets/specific/<%= ui.id %>/tabs/tab_standard_fla.png",
+  "layer1.texture": "Boxy Theme/assets/variants//<%= ui.variant.id %>/tabs/tab_standard_flat_hovered.png",
+  "settings": ["theme_tab_standard_flat"]
+},
+
+{
+  "class": "tab_control",
   "settings": ["theme_tab_rounded", "!theme_bar"],
   "layer1.texture": "Boxy Theme/assets/variants/<%= ui.variant.id %>/tabs/tab_hovered_rounded.png"
 },
@@ -145,4 +152,3 @@
   "settings": ["theme_tab_selected_transparent"],
   "fg": [<%= ui.foreground.selected.rgb %>]
 },
-

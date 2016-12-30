@@ -12808,6 +12808,18 @@
     "layer2.texture": "Boxy Theme/assets/common/tabs/tab_selected_rounded.png"
   },
   
+  {
+    "class": "tab_control",
+    "content_margin": [24, 8, 23, 4],
+    "hit_test_level": 0.4,
+    "layer2.inner_margin": [21, 0],
+    "layer1.inner_margin": [21, 0],
+    // "layer0.inner_margin": [21, 0],
+    "layer2.texture": "Boxy Theme/assets/common/tabs/tab_standard_flat.png",
+    "max_margin_trim": 6,
+    "settings": ["theme_tab_standard_flat"]
+  },
+  
   //
   // Label
   //
@@ -12838,6 +12850,13 @@
     "class": "tab_control",
     "attributes": ["hover"],
     "layer1.opacity": 1.0
+  },
+  
+  {
+    "class": "tab_control",
+    "attributes": ["hover"],
+    "settings": ["theme_tab_standard_flat"],
+    "layer1.opacity": 0.7
   },
   
   // Tab Selected
@@ -13206,6 +13225,13 @@
   
   {
     "class": "tab_control",
+    // "layer0.texture": "Boxy Theme/assets/specific/ocean/tabs/tab_standard_fla.png",
+    "layer1.texture": "Boxy Theme/assets/variants//dark/tabs/tab_standard_flat_hovered.png",
+    "settings": ["theme_tab_standard_flat"]
+  },
+  
+  {
+    "class": "tab_control",
     "settings": ["theme_tab_rounded", "!theme_bar"],
     "layer1.texture": "Boxy Theme/assets/variants/dark/tabs/tab_hovered_rounded.png"
   },
@@ -13323,7 +13349,6 @@
     "settings": ["theme_tab_selected_transparent"],
     "fg": [221, 223, 225]
   },
-  
   
   // Tabs Mono Accent
   // ===========================================================================
